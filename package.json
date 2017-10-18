@@ -1,0 +1,23 @@
+{
+  "name": "constuctor-hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rogwzrd/constuctor-hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rogwzrd/constuctor-hangman/issues"
+  },
+  "homepage": "https://github.com/Rogwzrd/constuctor-hangman#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0"
+  }
+}
