@@ -1,8 +1,8 @@
 var inquirer = require('inquirer');
-var Word = require('./main.js')
+var Letter = require('./letter.js')
 
 function initGame() {
-    var newWord = new Word;
+    var newLetter = new Letter;
 
     function startGame() {
 
@@ -14,7 +14,7 @@ function initGame() {
             }
         ]).then(function (answers) {
             if (answers.startPage) {
-                newWord.populateWord();
+                newLetter.populateWord();
                 chooseLetter();
             }
         });
@@ -29,15 +29,15 @@ function initGame() {
                 name: "letterChoice"
             }
         ]).then(function (answers) {
-            if (newWord.successAndBlank.indexOf("_") != -1 && newWord.guesses > 0) {
-                newWord.checkLetter(answers.letterChoice);
+            if (newLetter.successAndBlank.indexOf("_") != -1 && newLetter.guesses > 0) {
+                newLetter.checkLetter(answers.letterChoice);
                 checkGameState();
             }
         });
     }
 
     function checkGameState() {
-        if (newWord.successAndBlank.indexOf("_") != -1 && newWord.guesses > 0) {
+        if (newLetter.successAndBlank.indexOf("_") != -1 && newLetter.guesses > 0) {
             chooseLetter()
         } else {
             endGame()
