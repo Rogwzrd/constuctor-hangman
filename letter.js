@@ -11,7 +11,7 @@ var Letter = function(x) {
         for (var i = 0; i < this.numBlanks; i++) {
             this.successAndBlank.push("_")
         }
-        console.log(`\nThis is the current state of the unsolved word: ${this.successAndBlank.join((" "))}`)
+        console.log(`\n${this.successAndBlank.join((" "))}`)
     }
 
     this.checkLetter = function (letter) {
@@ -25,13 +25,13 @@ var Letter = function(x) {
         } else if (this.wrongGuess.indexOf(letter) == -1 && this.successAndBlank.indexOf(letter) === -1) {
             this.wrongGuess.push(letter)
             this.guesses--
-            console.log(`\nToo bad try another letter! \nYou have ${this.guesses} left.\nYou have already guessed these: ${this.wrongGuess.join(" ")}`)
+            console.log(`\nToo bad try another letter! \nYou have ${this.guesses} guesses left.\nYou have already guessed these: ${this.wrongGuess.join(" ")}`)
         } else {
             console.log("You already guessed that letter")
         }
 
         if (this.successAndBlank.indexOf("_") == -1 ) {
-            console.log("You Win!")
+            console.log("*************You Win!*************")
         }
     }
 }
